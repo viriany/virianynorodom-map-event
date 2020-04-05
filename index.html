@@ -10,29 +10,43 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossorigin="" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet"> -->
 
 </head>
 
-<body>
-    <p>Que faire à <strong><span style="text-decoration: underline yellow;">Paris</span></strong> ?</p>
+<body class="uk-container">
+    <h1 class="uk-align-center">Que faire à <strong><span
+                style="text-decoration: underline yellow;">Paris</span></strong> ?</h1>
 
-    <div id="mapid"></div>
 
-    <form onsubmit="onFormSubmit(event)">
-        <input type="text" name="search" id="searchInput"/>
-        <input type="submit" />
-    </form>
-    <button onclick="getData('concert')">Concert</button>
-    <button onclick="getData('restaurant')">Restaurant</button>
-    <button onclick="getData('jeu')">Jeu</button>
+
+    <div class="uk-align-center" id="mapid"></div>
+
+    <div class="eventsearch">
+
+        <form class="uk-search uk-search-default" onsubmit=" onFormSubmit(event)">
+            <span class="uk-search-icon-flip uk-align-center" uk-search-icon></span>
+            <input class="uk-search-input" type="text" name="search" id="searchInput" />
+            <input class="uk-button uk-button-danger uk-button-small uk-margin-top" type="submit" />
+        </form>
+
+        <div class="button uk-align-center">
+            <button class="uk-button uk-button-default" onclick="getData('concert')">Concert</button>
+            <button class="uk-button uk-button-default" onclick="getData('restaurant')">Restaurant</button>
+            <button class="uk-button uk-button-default" onclick="getData('jeu')">Jeu</button>
+        </div>
+
+    </div>
 
     <!-- import the webpage's javascript file -->
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
