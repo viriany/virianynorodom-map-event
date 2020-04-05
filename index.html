@@ -17,7 +17,16 @@
 
 <body>
     <p>Que faire à <strong><span style="text-decoration: underline yellow;">Paris</span></strong> ?</p>
+
     <div id="mapid"></div>
+
+    <form onsubmit="onFormSubmit(event)">
+        <input type="text" name="search" id="searchInput"/>
+        <input type="submit" />
+    </form>
+    <button onclick="getData('concert')">Concert</button>
+    <button onclick="getData('restaurant')">Restaurant</button>
+    <button onclick="getData('jeu')">Jeu</button>
 
     <!-- import the webpage's javascript file -->
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
